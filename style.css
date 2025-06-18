@@ -2,66 +2,58 @@
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
-  background-color: #ffffff !important;
   color: #000000 !important;
-  margin: 0;
-  padding: 0;
 }
 
-.signature-table {
+.signature-container {
   font-family: 'Montserrat', Arial, sans-serif;
-  width: 100%;
-  padding: 10px;
-  max-width: 100%;
-  font-size: 12px;
-}
-
-.logo-left {
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  margin-left: 0;
-  content: url('https://cdn.shopify.com/s/files/1/0837/4475/1921/files/bg-white.png?v=1750256451');
-}
-
-.info-section {
-  vertical-align: top;
-  padding-left: 10px;
+  background-color: #ffffff;
+  background-image: url('https://cdn.noizejeans.com/images/sig-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #000000;
-  font-size: 12px;
-  line-height: 1.4;
+  padding: 20px;
+  max-width: 100%;
 }
 
 .name {
-  margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  margin: 0;
 }
 
 .role {
+  color: #555;
   margin: 2px 0 10px 0;
-  font-size: 12px;
-  color: #555555;
+  font-size: 13px;
 }
 
 .contact-line {
-  margin: 4px 0;
-  font-size: 12px;
+  margin: 6px 0;
+  font-size: 13px;
+  color: #000000;
+}
+
+.contact-line a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .contact-line img {
-  width: 12px;
+  width: 14px;
   vertical-align: middle;
   margin-right: 6px;
 }
 
 .address-indent {
-  margin: 4px 0 10px 18px;
-  font-size: 12px;
+  margin-left: 24px;
+  font-size: 13px;
 }
 
-.contact-line a {
-  text-decoration: none;
-  color: inherit;
+.logo-left {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-left: 5px;
 }
