@@ -1,91 +1,47 @@
-<!-- Import Montserrat Font -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Signature</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<style>
-  /* Not all email clients support <style> tags – use inline styles below for safety */
-
-  body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-  }
-
-  .signature-container {
-    background-color: #ffffff !important;
-  
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #000000 !important;
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .contact-info p, .contact-info a {
-    font-size: 13px;
-    color: #000000 !important;
-    margin: 6px 0;
-    text-decoration: none;
-  }
-
-  .name {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin: 0;
-  }
-
-  .role {
-    color: #555;
-    margin: 2px 0 10px 0;
-  }
-
-  .icon {
-    width: 14px;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-
-  .logo-left {
-    width: 100%;
-    max-width: 180px;
-    height: auto;
-    margin-left: 5px;
-  }
-</style>
-<table cellpadding="0" cellspacing="0" style="font-family: 'Montserrat', Arial, sans-serif; background-color: #ffffff; background-image: url('https://cdn.noizejeans.com/images/sig-bg.jpg'); background-repeat: no-repeat; background-size: cover; color: #000000; padding: 20px; max-width: 100%;" bgcolor="#ffffff">
+<table class="signature-table" cellpadding="0" cellspacing="0">
   <tr>
-    <!-- Left Logo Column -->
-    <td style="vertical-align: top; width: 170px; padding-right: 4px;">
-      <img src="https://cdn.noizejeans.com/images/sig-group-logos-3.jpg" alt="Noize Group Logos" style="width: 100%; max-width: 180px; height: auto; margin-left: 5px;">
+    <!-- Logo Section -->
+    <td style="vertical-align: top; width: 140px; padding-right: 6px;">
+      <img src="https://cdn.shopify.com/s/files/1/0837/4475/1921/files/bg-white.png?v=1750256451" alt="Noize Group Logos" class="logo-left">
     </td>
 
-    <!-- Right Info Column -->
-    <td style="vertical-align: top; padding-left: 12px; color: #000000;">
-      <p style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: 1.5px; color: #000000;">SARIF MIA</p>
-      <p style="margin: 2px 0 15px 0; font-size: 13px; color: #555555;">Information Technology</p>
+    <!-- Info Section -->
+    <td class="info-section">
+      <p class="name">SARIF MIA</p>
+      <p class="role">Information Technology</p>
 
-      <p style="margin: 6px 0; font-size: 13px; color: #000000;">
-        <img src="https://cdn.noizejeans.com/images/icon-phone.jpg" alt="Phone" style="width: 14px; vertical-align: middle; margin-right: 6px;">
-        <a href="tel:+8801571447136" style="text-decoration: none; color: #000000;">+8801571447136</a>
+      <p class="contact-line">
+        <img src="https://cdn.shopify.com/s/files/1/0837/4475/1921/files/call.png?v=1750258077" alt="Phone">
+        <a href="tel:+8801571447136">+8801571447136</a>
       </p>
 
-      <p style="margin: 6px 0; font-size: 13px; color: #000000;">
-        <img src="https://cdn.noizejeans.com/images/icon-email.jpg" alt="Email" style="width: 14px; vertical-align: middle; margin-right: 6px;">
-        <a href="mailto:sarif@lovegenbd.com" style="text-decoration: none; color: #000000;">sarif@lovegenbd.com</a>
+      <p class="contact-line">
+        <img src="https://cdn.shopify.com/s/files/1/0837/4475/1921/files/email.png?v=1750258517" alt="Email">
+        <a href="mailto:sarif@lovegenbd.com">sarif@lovegenbd.com</a>
       </p>
 
-      <p style="margin: 6px 0; font-size: 13px; color: #000000;">
-        <img src="https://cdn.noizejeans.com/images/icon-location.jpg" alt="Location" style="width: 14px; vertical-align: middle; margin-right: 6px;">
+      <p class="contact-line">
+        <img src="https://cdn.shopify.com/s/files/1/0837/4475/1921/files/location.png?v=1750258801" alt="Location">
         House: 16–17, Level:10, Road: 12, Sector: 6,
       </p>
-      <p style="margin: 6px 0; margin-left:24px; font-size: 13px; color: #000000;">
-        Uttara, Dhaka-1230
-      </p>
+      <p class="address-indent">Uttara, Dhaka-1230</p>
 
-      <p style="margin: 6px 0; font-size: 13px; color: #000000;">
-        <img src="https://cdn.noizejeans.com/images/icon-website.jpg" alt="Website" style="width: 14px; vertical-align: middle; margin-right: 6px;">
-        <a href="https://noize-group.com" target="_blank" style="text-decoration: none; color: #000000;">noize-group.com</a>
+      <p class="contact-line">
+        <img src="https://cdn.shopify.com/s/files/1/0837/4475/1921/files/link.png?v=1750259013" alt="Website">
+        <a href="https://noize-group.com" target="_blank">noize-group.com</a>
       </p>
     </td>
   </tr>
 </table>
+
+</body>
+</html>

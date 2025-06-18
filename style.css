@@ -1,1 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  margin: 0;
+  padding: 0;
+}
+
+.signature-table {
+  font-family: 'Montserrat', Arial, sans-serif;
+  width: 100%;
+  padding: 10px;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.logo-left {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin-left: 0;
+  content: url('https://cdn.shopify.com/s/files/1/0837/4475/1921/files/bg-white.png?v=1750256451');
+}
+
+.info-section {
+  vertical-align: top;
+  padding-left: 10px;
+  color: #000000;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.role {
+  margin: 2px 0 10px 0;
+  font-size: 12px;
+  color: #555555;
+}
+
+.contact-line {
+  margin: 4px 0;
+  font-size: 12px;
+}
+
+.contact-line img {
+  width: 12px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.address-indent {
+  margin: 4px 0 10px 18px;
+  font-size: 12px;
+}
+
+.contact-line a {
+  text-decoration: none;
+  color: inherit;
+}
