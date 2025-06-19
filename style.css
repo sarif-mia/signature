@@ -1,63 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .signature-container {
-  font-family: 'Montserrat', Arial, sans-serif;
   background-color: #ffffff;
-  background-image: url('https://cdn.noizejeans.com/images/sig-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #000000;
-  padding: 20px;
-  max-width: 100%;
+  padding: 14px;
+  max-width: 600px;
+  width: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.tagline {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #000000;
+}
+.logo-section {
+  vertical-align: top;
+  width: 140px;
+  padding-right: 6px;
+}
+
+.logo-image {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.info-section {
+  vertical-align: top;
+  padding-left: 6px;
+  color: #000000;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.3px;
   margin: 0;
+  line-height: 1.2;
+  color: #000000;
 }
 
 .role {
-  color: #555;
-  margin: 2px 0 6px 0;
-  font-size: 12px;
-  line-height: 1.4;
+  color: #555555;
+  margin: 1px 0 5px 0;
+  font-size: 10.5px;
+  line-height: 1.2;
 }
 
 .contact-line {
-  margin: 3px 0;
-  font-size: 12px;
+  margin: 1px 0;
+  font-size: 11.5px;
+  line-height: 1.3;
   color: #000000;
-  line-height: 1.4;
 }
 
 .contact-line a {
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
 }
 
-.contact-line img {
-  width: 13px;
+.icon {
+  width: 12px;
   vertical-align: middle;
   margin-right: 5px;
-}
-
-.address-indent {
-  margin-left: 22px;
-  font-size: 12px;
-  margin-top: -2px;
-}
-
-.logo-left {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  margin-left: 0;
 }
