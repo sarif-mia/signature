@@ -1,6 +1,6 @@
+
 [build]
-  publish = .
-  command = ""
+publish = "."
 
 [settings]
   # Add any custom settings here
