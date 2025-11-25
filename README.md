@@ -15,3 +15,7 @@ No coding required—just fill a form and copy the generated HTML
 
 Ideal for individuals or small teams needing branded email signatures
 
+
+
+
+New York, Barcelona, Hong Kong, Delhi, Dhaka
