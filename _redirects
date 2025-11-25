@@ -1,0 +1,6 @@
+/*
+  Netlify redirect rules
+  https://docs.netlify.com/routing/redirects/
+*/
+# Redirect all requests to index.html (for SPAs)
+/*    /index.html   200
