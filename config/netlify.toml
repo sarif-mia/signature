@@ -1,6 +1,0 @@
-
-[build]
-publish = "."
-
-[settings]
-  # Add any custom settings here

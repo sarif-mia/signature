@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create a polished, copy-ready HTML email signature in your browser." />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Signature Studio — Email Signature Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Signature Studio home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Signature Studio</span>
+      </a>
+      <span class="privacy-note">Private by design · Your data stays in this browser</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <span class="eyebrow">Free email signature generator</span>
+        <h1 id="page-title">Make every email look<br /><span>professionally yours.</span></h1>
+        <p>Build a clean, on-brand HTML signature, preview it instantly, then copy it into Gmail, Outlook, or any modern email client.</p>
+      </section>
+
+      <section class="studio" aria-label="Email signature builder">
+        <form id="signature-form" class="editor-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="step-label">01 · Your details</span>
+              <h2>Build your signature</h2>
+            </div>
+            <button class="text-button" type="button" id="reset-button">Reset</button>
+          </div>
+
+          <fieldset>
+            <legend>Identity</legend>
+            <div class="field-grid">
+              <label class="field">
+                <span>Full name</span>
+                <input name="name" type="text" value="Sarif Mia" maxlength="60" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span>Job title</span>
+                <input name="role" type="text" value="Software Engineer" maxlength="80" autocomplete="organization-title" />
+              </label>
+              <label class="field">
+                <span>Company</span>
+                <input name="company" type="text" value="Your Company" maxlength="80" autocomplete="organization" />
+              </label>
+              <label class="field">
+                <span>Logo or photo URL</span>
+                <input name="image" type="url" placeholder="https://example.com/logo.png" inputmode="url" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact</legend>
+            <div class="field-grid">
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" value="hello@example.com" maxlength="120" autocomplete="email" />
+              </label>
+              <label class="field">
+                <span>Phone</span>
+                <input name="phone" type="tel" value="+880 1XXX-XXXXXX" maxlength="40" autocomplete="tel" />
+              </label>
+              <label class="field">
+                <span>Website</span>
+                <input name="website" type="text" value="example.com" maxlength="120" inputmode="url" />
+              </label>
+              <label class="field">
+                <span>Location</span>
+                <input name="location" type="text" value="Dhaka, Bangladesh" maxlength="100" autocomplete="address-level2" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Social profiles <span>Optional</span></legend>
+            <div class="field-grid">
+              <label class="field">
+                <span>LinkedIn URL</span>
+                <input name="linkedin" type="url" placeholder="https://linkedin.com/in/username" inputmode="url" />
+              </label>
+              <label class="field">
+                <span>GitHub URL</span>
+                <input name="github" type="url" placeholder="https://github.com/username" inputmode="url" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Appearance</legend>
+            <div class="appearance-grid">
+              <label class="field color-field">
+                <span>Brand color</span>
+                <span class="color-control">
+                  <input name="color" type="color" value="#0f766e" aria-label="Brand color" />
+                  <output id="color-value">#0F766E</output>
+                </span>
+              </label>
+              <div class="field">
+                <span>Layout</span>
+                <div class="layout-options" role="radiogroup" aria-label="Signature layout">
+                  <label><input type="radio" name="layout" value="classic" checked /><span>Classic</span></label>
+                  <label><input type="radio" name="layout" value="compact" /><span>Compact</span></label>
+                  <label><input type="radio" name="layout" value="minimal" /><span>Minimal</span></label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="preview-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="step-label">02 · Preview</span>
+              <h2>Ready to send</h2>
+            </div>
+            <span class="live-indicator"><i></i> Live</span>
+          </div>
+
+          <div class="email-frame">
+            <div class="email-toolbar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <b>New message</b>
+            </div>
+            <div class="email-meta" aria-hidden="true">
+              <p><span>To</span> client@example.com</p>
+              <p><span>Subject</span> Great speaking with you</p>
+            </div>
+            <div class="email-body">
+              <p>Hi there,</p>
+              <p>Thank you for your time today. I have included the details below and look forward to speaking again soon.</p>
+              <div id="signature-preview" class="signature-preview"></div>
+            </div>
+          </div>
+
+          <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+          <div class="actions">
+            <button id="copy-button" class="primary-button" type="button">
+              <span aria-hidden="true">⧉</span> Copy signature
+            </button>
+            <button id="download-button" class="secondary-button" type="button">Download HTML</button>
+          </div>
+          <p class="install-hint">Paste directly into your email client's signature settings. Formatting and links are included.</p>
+        </aside>
+      </section>
+
+      <section class="how-it-works" aria-labelledby="how-title">
+        <span class="eyebrow">Simple by design</span>
+        <h2 id="how-title">From blank to branded in three steps.</h2>
+        <div class="steps">
+          <article><span>1</span><h3>Add your details</h3><p>Enter only the information you want recipients to see.</p></article>
+          <article><span>2</span><h3>Make it yours</h3><p>Choose a layout and set your brand's accent color.</p></article>
+          <article><span>3</span><h3>Copy and paste</h3><p>Move the finished signature into Gmail, Outlook, or another client.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with care by <a href="https://github.com/sarif-mia">Sarif Mia</a>.</p>
+      <p>No account. No tracking. No data upload.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
