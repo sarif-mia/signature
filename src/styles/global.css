@@ -52,3 +52,15 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .thumb-editorial em{left:61px;top:20px;width:50px}
 .thumb-editorial b{left:61px;top:31px;width:58px}
 .thumb-editorial:after{left:auto;right:12px;top:39px;width:22px;height:22px;background:repeating-linear-gradient(45deg,#111 0 2px,#fff 2px 4px);border:1px solid #111}
+
+/* Compact, banner and split signature template thumbnails */
+.thumb-compact i,.thumb-banner i,.thumb-split i{display:none}
+.thumb-compact em{left:14px;top:30px;width:92px}
+.thumb-compact b{left:14px;top:41px;width:70px}
+.thumb-compact:after{left:12px;right:12px;top:22px;width:auto;height:1px;background:#d0d5dd}
+.thumb-banner:after{left:10px;right:10px;top:10px;width:auto;height:28px;border-radius:4px 4px 0 0}
+.thumb-banner em{z-index:1;left:20px;top:18px;background:#fff}
+.thumb-banner b{left:20px;top:50px;width:80px;box-shadow:0 9px 0 #e4e7ec}
+.thumb-split em{left:14px;top:26px;width:38px}
+.thumb-split b{left:14px;top:37px;width:30px;box-shadow:56px -14px 0 #d0d5dd,56px -4px 0 #d0d5dd,56px 6px 0 #d0d5dd}
+.thumb-split:after{left:61px;top:16px;height:44px}

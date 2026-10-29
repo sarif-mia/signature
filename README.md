@@ -1,6 +1,6 @@
 # Signature Studio
 
-A privacy-first React application for creating professional, email-safe HTML signatures. It provides six customizable layouts, live desktop and mobile previews, rich clipboard copy, HTML export, campaign banners, social links, and installation guidance.
+A privacy-first React application for creating professional, email-safe HTML signatures. It provides ten customizable layouts, live desktop and mobile previews, rich clipboard copy, HTML export, campaign banners, social links, and installation guidance.
 
 ## Stack
 
