@@ -17,14 +17,17 @@
         <span class="brand-mark" aria-hidden="true">S</span>
         <span>Signature Studio</span>
       </a>
-      <span class="privacy-note">Private by design · Your data stays in this browser</span>
+      <span class="privacy-note"><i aria-hidden="true"></i> Private by design · Your data stays in this browser</span>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
-        <span class="eyebrow">Free email signature generator</span>
+        <span class="eyebrow"><i aria-hidden="true"></i> Free email signature generator</span>
         <h1 id="page-title">Make every email look<br /><span>professionally yours.</span></h1>
         <p>Build a clean, on-brand HTML signature, preview it instantly, then copy it into Gmail, Outlook, or any modern email client.</p>
+        <div class="hero-trust" aria-label="Product highlights">
+          <span>No sign-up</span><span>Works everywhere</span><span>100% private</span>
+        </div>
       </section>
 
       <section class="studio" aria-label="Email signature builder">
@@ -34,7 +37,9 @@
               <span class="step-label">01 · Your details</span>
               <h2>Build your signature</h2>
             </div>
-            <button class="text-button" type="button" id="reset-button">Reset</button>
+            <button class="text-button" type="button" id="reset-button" aria-label="Reset all fields to their defaults">
+              <span aria-hidden="true">↺</span> Reset
+            </button>
           </div>
 
           <fieldset>
@@ -123,7 +128,7 @@
               <span class="step-label">02 · Preview</span>
               <h2>Ready to send</h2>
             </div>
-            <span class="live-indicator"><i></i> Live</span>
+            <span class="live-indicator"><i></i> Live preview</span>
           </div>
 
           <div class="email-frame">
@@ -145,11 +150,11 @@
           <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
           <div class="actions">
             <button id="copy-button" class="primary-button" type="button">
-              <span aria-hidden="true">⧉</span> Copy signature
+              <span aria-hidden="true">▣</span> Copy signature
             </button>
             <button id="download-button" class="secondary-button" type="button">Download HTML</button>
           </div>
-          <p class="install-hint">Paste directly into your email client's signature settings. Formatting and links are included.</p>
+          <p class="install-hint"><span aria-hidden="true">✓</span> Formatting and links are included when you paste.</p>
         </aside>
       </section>
 
@@ -162,6 +167,20 @@
           <article><span>3</span><h3>Copy and paste</h3><p>Move the finished signature into Gmail, Outlook, or another client.</p></article>
         </div>
       </section>
+
+      <section class="compatibility" aria-labelledby="compatibility-title">
+        <div>
+          <span class="eyebrow"><i aria-hidden="true"></i> Built for the inbox</span>
+          <h2 id="compatibility-title">One signature.<br />Every conversation.</h2>
+          <p>The generated HTML uses email-safe tables and inline styling so your signature stays polished across the clients your recipients use.</p>
+        </div>
+        <ul aria-label="Supported email clients">
+          <li><strong>G</strong><span>Gmail<small>Web & mobile</small></span></li>
+          <li><strong>O</strong><span>Outlook<small>Desktop & web</small></span></li>
+          <li><strong>A</strong><span>Apple Mail<small>macOS & iOS</small></span></li>
+          <li><strong>+</strong><span>And more<small>Modern clients</small></span></li>
+        </ul>
+      </section>
     </main>
 
     <footer>
@@ -169,6 +188,6 @@
       <p>No account. No tracking. No data upload.</p>
     </footer>
 
-    <script src="./app.js"></script>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

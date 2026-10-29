@@ -1,6 +1,6 @@
 # Signature Studio
 
-A private, browser-based HTML email signature generator. Create a polished signature, preview it inside a realistic email, and copy or download email-client-friendly HTML.
+A professional, private, browser-based HTML email signature generator. Create a polished signature, preview it inside a realistic email, and copy or download email-client-friendly HTML.
 
 **Live app:** [signature-nine-kohl.vercel.app](https://signature-nine-kohl.vercel.app)
 
@@ -19,10 +19,24 @@ A private, browser-based HTML email signature generator. Create a polished signa
 
 ## Run locally
 
-No build step or dependencies are required. Open `index.html` directly, or serve the directory:
+No build step or dependencies are required. Because the JavaScript uses native ES modules, serve the directory locally:
 
 ```bash
 npx serve .
+```
+
+## Project structure
+
+```text
+├── index.html          # Page structure and content
+├── styles.css          # Responsive visual system
+├── js/
+│   ├── app.js          # UI events and rendering flow
+│   ├── config.js       # Shared configuration
+│   ├── signature.js    # Email-safe signature templates
+│   ├── storage.js      # Local persistence
+│   └── utils.js        # Sanitizing and download helpers
+└── vercel.json         # Static hosting configuration
 ```
 
 ## Deploy
