@@ -29,6 +29,31 @@ test("rejects unsafe URLs and invalid style values", () => {
 test("editorial template renders brand fallback and safe QR code", () => {
   const html = createSignatureHtml({ ...defaultSignature, template: "editorial", logo: "", brandName: "NDS9", qrCode: "javascript:alert(1)" });
   assert.match(html, /NDS9/);
-  assert.match(html, /QR CODE/);
+  assert.doesNotMatch(html, /alt="QR code"/);
   assert.doesNotMatch(html, /javascript:/i);
+});
+
+test("uses hosted PNG icons only for a valid http asset base", () => {
+  const data = { ...defaultSignature, template: "classic", linkedin: "linkedin.com/in/name" };
+  const hosted = createSignatureHtml(data, { assetBase: "https://signature.example/" });
+  assert.match(hosted, /src="https:\/\/signature\.example\/icons\/linkedin\.png"/);
+  assert.match(hosted, /src="https:\/\/signature\.example\/icons\/email\.png"/);
+  const unsafe = createSignatureHtml(data, { assetBase: "javascript:alert(1)" });
+  assert.doesNotMatch(unsafe, /icons\//);
+  assert.doesNotMatch(unsafe, /javascript:/i);
+});
+
+test("clamps sizes and shapes to supported values", () => {
+  const data = normalizeSignature({ photoSize: "999", logoHeight: "abc", iconShape: "star", photoShape: "auto", mutedColor: "blue" });
+  assert.equal(data.photoSize, 120);
+  assert.equal(data.logoHeight, defaultSignature.logoHeight);
+  assert.equal(data.iconShape, defaultSignature.iconShape);
+  assert.equal(data.photoShape, "auto");
+  assert.equal(data.mutedColor, defaultSignature.mutedColor);
+});
+
+test("hides the initials avatar when disabled", () => {
+  const html = createSignatureHtml({ ...defaultSignature, template: "classic", name: "Ada Lovelace", photo: "", showAvatar: false });
+  assert.doesNotMatch(html, />AL</);
+  assert.match(createSignatureHtml({ ...defaultSignature, template: "classic", name: "Ada Lovelace" }), />AL</);
 });

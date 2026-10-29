@@ -64,3 +64,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .thumb-split em{left:14px;top:26px;width:38px}
 .thumb-split b{left:14px;top:37px;width:30px;box-shadow:56px -14px 0 #d0d5dd,56px -4px 0 #d0d5dd,56px 6px 0 #d0d5dd}
 .thumb-split:after{left:61px;top:16px;height:44px}
+
+/* Range sliders in the style panel */
+.field input[type=range]{height:auto;padding:0;border:0;box-shadow:none;accent-color:var(--teal)}

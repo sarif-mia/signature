@@ -49,3 +49,7 @@ Signature data is saved only to the visitor’s browser using `localStorage`. Th
 ## Deployment
 
 Vercel builds the project with `npm run build` and serves `dist/`. The SPA rewrite in `vercel.json` preserves direct access to `/builder`, while React Router handles the application’s not-found state.
+
+### Signature icons
+
+Contact and social icons are white PNGs in `public/icons/`, placed on a brand-colored badge so they work with any color and in email clients that block SVG. Copied signatures link to these files on the site's own origin. Set `VITE_ASSET_BASE` (for example `https://your-domain.com`) to host them elsewhere; signatures copied from `localhost` will not show icons once sent.
