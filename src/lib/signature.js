@@ -14,14 +14,30 @@ export const defaultSignature = {
 const esc = (value = "") => String(value).replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 const url = (value = "") => { if (!value.trim()) return ""; const candidate = /^(https?:|mailto:|tel:|data:image\/)/i.test(value) ? value : `https://${value}`; try { const parsed = new URL(candidate); return ["http:", "https:", "mailto:", "tel:", "data:"].includes(parsed.protocol) ? esc(candidate) : ""; } catch { return ""; } };
 const fontSize = { small: 11, medium: 12, large: 13 };
+const safeFonts = ["Arial", "Verdana", "Georgia", "Tahoma", "Trebuchet MS"];
+const color = (value, fallback) => /^#[0-9a-f]{6}$/i.test(value || "") ? value : fallback;
+
+export function normalizeSignature(input = {}) {
+  return {
+    ...defaultSignature,
+    ...input,
+    template: templates.some(({ id }) => id === input.template) ? input.template : defaultSignature.template,
+    color: color(input.color, defaultSignature.color),
+    textColor: color(input.textColor, defaultSignature.textColor),
+    font: safeFonts.includes(input.font) ? input.font : defaultSignature.font,
+    size: Object.hasOwn(fontSize, input.size) ? input.size : defaultSignature.size,
+    showIcons: input.showIcons !== false,
+  };
+}
 
 function avatar(data, square = false) { const image = url(data.photo); return image ? `<img src="${image}" width="76" height="76" alt="${esc(data.name)}" style="display:block;width:76px;height:76px;border:0;border-radius:${square ? "12px" : "50%"};object-fit:cover">` : `<div style="width:76px;height:76px;border-radius:${square ? "12px" : "50%"};background:${data.color};color:#fff;font:bold 25px/76px Arial;text-align:center">${esc((data.name || "S").trim().charAt(0).toUpperCase())}</div>`; }
 function logo(data) { const src = url(data.logo); return src ? `<img src="${src}" height="28" alt="${esc(data.company)}" style="display:block;max-width:120px;height:28px;object-fit:contain">` : ""; }
-function social(data) { const entries = [["in", data.linkedin], ["f", data.facebook], ["ig", data.instagram], ["x", data.x], ["yt", data.youtube], ["gh", data.github]]; return entries.filter(([, href]) => href).map(([label, href]) => `<a href="${url(href)}" style="display:inline-block;margin-right:5px;padding:4px 6px;color:#fff;background:${data.color};border-radius:3px;text-decoration:none;font:bold 9px Arial">${label}</a>`).join(""); }
+function social(data) { const entries = [["in", data.linkedin], ["f", data.facebook], ["ig", data.instagram], ["x", data.x], ["yt", data.youtube], ["gh", data.github]]; return entries.map(([label, href]) => [label, url(href)]).filter(([, href]) => href).map(([label, href]) => `<a href="${href}" style="display:inline-block;margin-right:5px;padding:4px 6px;color:#fff;background:${data.color};border-radius:3px;text-decoration:none;font:bold 9px Arial">${label}</a>`).join(""); }
 function contacts(data, size) { const rows = [["E", data.email, `mailto:${data.email}`], ["P", data.phone, `tel:${data.phone.replace(/[^+\d]/g, "")}`], ["M", data.mobile, `tel:${data.mobile.replace(/[^+\d]/g, "")}`], ["W", data.website, data.website], ["A", data.address, ""]]; return rows.filter(([, value]) => value).map(([icon, value, href]) => `<span style="display:inline-block;margin:2px 12px 2px 0;color:#475467;font-size:${size}px;line-height:18px">${data.showIcons ? `<b style="color:${data.color};margin-right:4px">${icon}</b>` : ""}${href ? `<a href="${url(href)}" style="color:#475467;text-decoration:none">${esc(value)}</a>` : esc(value)}</span>`).join(""); }
 function extras(data) { const cta = data.ctaText && data.ctaUrl ? `<a href="${url(data.ctaUrl)}" style="display:inline-block;margin-top:9px;padding:7px 11px;color:#fff;background:${data.color};border-radius:4px;text-decoration:none;font:bold 10px Arial">${esc(data.ctaText)}</a>` : ""; const banner = data.bannerUrl ? `<div style="padding-top:12px"><a href="${url(data.bannerLink || data.website)}"><img src="${url(data.bannerUrl)}" width="420" alt="Promotional banner" style="display:block;width:100%;max-width:420px;border:0"></a></div>` : ""; const disclaimer = data.disclaimer ? `<div style="max-width:480px;padding-top:10px;color:#98a2b3;font:9px/14px Arial">${esc(data.disclaimer)}</div>` : ""; return cta + banner + disclaimer; }
 
 export function createSignatureHtml(data) {
+  data = normalizeSignature(data);
   const size = fontSize[data.size] || 12; const family = esc(data.font); const name = esc(data.name); const role = [data.title, data.department].filter(Boolean).map(esc).join(" · "); const company = esc(data.company); const info = contacts(data, size); const socials = social(data); const add = extras(data); const mark = logo(data);
   const details = `<strong style="display:block;color:${data.textColor};font-size:${size + 8}px;line-height:25px">${name}${data.pronouns ? ` <small style="color:#98a2b3;font-size:10px">${esc(data.pronouns)}</small>` : ""}</strong><span style="display:block;color:${data.color};font-size:${size}px;font-weight:bold;line-height:18px">${role}</span><span style="display:block;padding-bottom:6px;color:#667085;font-size:${size}px;line-height:18px">${company}</span><div>${info}</div>${socials ? `<div style="padding-top:7px">${socials}</div>` : ""}${add}`;
   const table = (inner) => `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:${family},Arial,sans-serif">${inner}</table>`;
