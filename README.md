@@ -30,6 +30,7 @@ npx serve .
 
 ```text
 ├── index.html          # Page structure and content
+├── builder.html        # Dedicated signature generator
 ├── styles.css          # Responsive visual system
 ├── js/
 │   ├── app.js          # UI events and rendering flow
