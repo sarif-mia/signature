@@ -1,0 +1,10 @@
+{
+  "name": "Signature Studio",
+  "short_name": "Signature",
+  "description": "Professional email signature builder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#172733",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

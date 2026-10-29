@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 64" role="img" aria-labelledby="title desc">
+  <title id="title">Signature Studio</title>
+  <desc id="desc">Signature Studio logo with a handwritten S mark</desc>
+  <rect width="64" height="64" rx="16" fill="#172733"/>
+  <path d="M44.5 17.5c-4.4-3.7-16-4.3-20.8.7-5.7 5.9 1.7 9.4 8.2 10.8 7.8 1.7 12.8 3.7 9.1 9.1-4.1 6-16.7 6.7-22.1 1.4" fill="none" stroke="#69D4C4" stroke-width="5.4" stroke-linecap="round"/>
+  <path d="M17.7 46.4c9.7-1.5 20.1-1.2 29.4 1.1" fill="none" stroke="#FF8E70" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="m48.3 43.4 5.5 5.9-8 1.4 2.5-7.3Z" fill="#FF8E70"/>
+  <text x="82" y="31" fill="#172733" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="-.6">Signature</text>
+  <text x="83" y="49" fill="#667085" font-family="DM Sans, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3.5">STUDIO</text>
+</svg>

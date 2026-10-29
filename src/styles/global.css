@@ -24,3 +24,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .install-guide p{margin:8px 0;color:#667085;font-size:8px;line-height:1.45}
 @media(max-width:760px){.preview-actions.three{grid-template-columns:1fr}.email-preview.mobile-preview{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Brand identity */
+.brand{gap:11px}
+.brand-mark{width:38px;height:38px;display:block;flex:0 0 auto}
+.brand-wordmark{display:flex;flex-direction:column;line-height:1}
+.brand-wordmark strong{font:800 14px/1 var(--display);letter-spacing:-.035em}
+.brand-wordmark small{margin-top:5px;color:#7b8794;font:800 7px/1 var(--font);letter-spacing:.24em;text-transform:uppercase}
+.site-footer .brand-wordmark small{color:#8fa0a9}
+.site-footer .brand-mark{filter:drop-shadow(0 5px 12px #0004)}
+@media(max-width:430px){.site-header .brand-wordmark{display:none}}
