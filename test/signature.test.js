@@ -27,8 +27,8 @@ test("rejects unsafe URLs and invalid style values", () => {
 });
 
 test("editorial template renders brand fallback and safe QR code", () => {
-  const html = createSignatureHtml({ ...defaultSignature, template: "editorial", logo: "", brandName: "NDS9", qrCode: "javascript:alert(1)" });
-  assert.match(html, /NDS9/);
+  const html = createSignatureHtml({ ...defaultSignature, template: "editorial", logo: "", brandName: "ACME", qrCode: "javascript:alert(1)" });
+  assert.match(html, /ACME/);
   assert.doesNotMatch(html, /alt="QR code"/);
   assert.doesNotMatch(html, /javascript:/i);
 });
