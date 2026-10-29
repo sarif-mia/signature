@@ -7,10 +7,11 @@ A professional, private, browser-based HTML email signature generator. Create a 
 ## Features
 
 - Live signature preview
-- Identity, company, contact, location, and social fields
-- Custom logo or profile image URL
-- Brand color control
-- Classic, compact, and minimal layouts
+- Guided four-step builder for templates, details, images, and styling
+- Identity, company, department, contact, location, and social fields
+- Custom company logo and profile image URLs
+- Brand color, font family, font size, and call-to-action controls
+- Six professional, email-safe layouts
 - Rich HTML clipboard copy
 - Standalone HTML download
 - Automatic local browser saving
