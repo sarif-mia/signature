@@ -20,8 +20,15 @@ test("escapes visible user content", () => {
 test("rejects unsafe URLs and invalid style values", () => {
   const data = normalizeSignature({ template: "unknown", color: "red;position:fixed", font: "Comic Sans", linkedin: "javascript:alert(1)" });
   const html = createSignatureHtml(data);
-  assert.equal(data.template, "classic");
+  assert.equal(data.template, defaultSignature.template);
   assert.equal(data.color, defaultSignature.color);
   assert.equal(data.font, defaultSignature.font);
+  assert.doesNotMatch(html, /javascript:/i);
+});
+
+test("editorial template renders brand fallback and safe QR code", () => {
+  const html = createSignatureHtml({ ...defaultSignature, template: "editorial", logo: "", brandName: "NDS9", qrCode: "javascript:alert(1)" });
+  assert.match(html, /NDS9/);
+  assert.match(html, /QR CODE/);
   assert.doesNotMatch(html, /javascript:/i);
 });

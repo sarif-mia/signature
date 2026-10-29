@@ -46,3 +46,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .error-state>img{margin-bottom:24px}
 .error-state p{max-width:480px}
 .error-state button{padding:12px 18px;color:#fff;background:var(--navy);border:0;border-radius:8px;font-size:12px;font-weight:800}
+
+/* Editorial signature template thumbnail */
+.thumb-editorial i{left:13px;top:25px;width:35px;height:17px;border-radius:0}
+.thumb-editorial em{left:61px;top:20px;width:50px}
+.thumb-editorial b{left:61px;top:31px;width:58px}
+.thumb-editorial:after{left:auto;right:12px;top:39px;width:22px;height:22px;background:repeating-linear-gradient(45deg,#111 0 2px,#fff 2px 4px);border:1px solid #111}
