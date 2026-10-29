@@ -314,6 +314,18 @@
   height: 2px;
 }
 
+.visual-realtor::after { left: 54px; top: 14px; width: 1px; height: 78px; background: #cbd5e1; }
+.visual-creator { border-left: 30px solid var(--accent); }
+.visual-creator i { left: -23px; top: 24px; width: 24px; height: 24px; background: #fff; border-radius: 7px; }
+.visual-creator em, .visual-creator b { left: 22px; }
+.visual-creator::after { display: none; }
+.visual-consultant i { display: none; }
+.visual-consultant em, .visual-consultant b { left: 18px; }
+.visual-consultant em { top: 25px; width: 78px; }
+.visual-consultant b { top: 52px; width: 98px; }
+.visual-consultant::after { left: 18px; right: 18px; top: 42px; height: 1px; background: #cbd5e1; }
+.visual-banner::after { left: 17px; right: 17px; bottom: 14px; height: 18px; border-radius: 3px; }
+
 /* Fields */
 .field-grid,
 .style-fields {

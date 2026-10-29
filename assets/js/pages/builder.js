@@ -151,5 +151,8 @@ bindEvents();
 
 const saved = settingsStore.load();
 if (saved) writeForm(saved);
+const requestedLayout = new URLSearchParams(window.location.search).get("template");
+const requestedField = elements.form.querySelector(`input[name="layout"][value="${CSS.escape(requestedLayout || "")}"]`);
+if (requestedField) requestedField.checked = true;
 showPanel(0);
 render();
