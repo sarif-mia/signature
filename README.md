@@ -2,6 +2,8 @@
 
 A private, browser-based HTML email signature generator. Create a polished signature, preview it inside a realistic email, and copy or download email-client-friendly HTML.
 
+**Live app:** [signature-nine-kohl.vercel.app](https://signature-nine-kohl.vercel.app)
+
 ## Features
 
 - Live signature preview
