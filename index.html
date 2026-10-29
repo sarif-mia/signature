@@ -1,34 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Create a polished, copy-ready HTML email signature in minutes." />
-    <meta name="theme-color" content="#111827" />
-    <title>Signature Studio — Professional Email Signature Generator</title>
+    <meta name="description" content="Create a polished, copy-ready HTML email signature in minutes." data-i18n-attr="content:meta.home.description" />
+    <meta name="theme-color" content="#192733" />
+    <title data-i18n="meta.home.title">Signature Studio — Professional Email Signature Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <script type="module" src="./assets/js/pages/home.js"></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Signature Studio home"><span class="brand-mark" aria-hidden="true">S</span><span>Signature Studio</span></a>
-      <nav class="site-nav" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#compatibility">Compatibility</a><a class="nav-cta" href="./builder.html">Create signature</a></nav>
+      <a class="brand" href="./index.html" aria-label="Signature Studio home" data-i18n-attr="aria-label:common.homeLink">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name">Signature Studio</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation" data-i18n-attr="aria-label:nav.mainLabel">
+        <a class="nav-anchor" href="#how-it-works" data-i18n="nav.howItWorks">How it works</a>
+        <a class="nav-anchor" href="#compatibility" data-i18n="nav.compatibility">Compatibility</a>
+        <label class="language-switcher">
+          <span class="visually-hidden" data-i18n="common.language">Language</span>
+          <select data-language-select></select>
+        </label>
+        <a class="nav-cta" href="./builder.html" data-i18n="nav.createSignature">Create signature</a>
+      </nav>
     </header>
+
     <main id="top">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
           <span class="hero-kicker">Signature Studio</span>
-          <h1 id="page-title">Email Signature<br />Template Generator</h1>
-          <p>Create your free email signature with our easy-to-use signature generator.</p>
-          <a class="hero-action" href="./builder.html">Create my signature <span aria-hidden="true">→</span></a>
-          <blockquote>
-            <p>“A clean, professional signature shouldn’t take a designer—or an afternoon.”</p>
-            <footer><span class="quote-avatar">SM</span><span><strong>Sarif Mia</strong><small>Creator, Signature Studio</small></span></footer>
-          </blockquote>
+          <h1 id="page-title" data-i18n-html="home.hero.title">Email Signature<br />Template Generator</h1>
+          <p data-i18n="home.hero.lead">Create your free email signature with our easy-to-use signature generator.</p>
+          <a class="hero-action" href="./builder.html">
+            <span data-i18n="home.hero.action">Create my signature</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <figure class="hero-quote">
+            <p data-i18n="home.hero.quote">“A clean, professional signature shouldn’t take a designer—or an afternoon.”</p>
+            <figcaption class="quote-author">
+              <span class="quote-avatar" aria-hidden="true">SM</span>
+              <span class="quote-meta">
+                <strong>Sarif Mia</strong>
+                <small data-i18n="home.hero.quoteRole">Creator, Signature Studio</small>
+              </span>
+            </figcaption>
+          </figure>
         </div>
-        <div class="hero-showcase" aria-label="Example professional email signature">
+
+        <div class="hero-showcase" role="img" aria-label="Example professional email signature" data-i18n-attr="aria-label:home.hero.showcaseLabel">
           <div class="showcase-glow"></div>
           <div class="showcase-card">
             <div class="showcase-brand"><span>STUDIO</span><i></i></div>
@@ -36,21 +61,77 @@
               <div class="showcase-photo">S</div>
               <div class="showcase-details">
                 <h2>Sarif Mia</h2>
-                <p>Software Engineer <b>·</b> Signature Studio</p>
+                <p><span data-i18n="home.hero.showcaseRole">Software Engineer</span> <b>·</b> Signature Studio</p>
                 <hr />
-                <ul><li><span>✉</span> hello@example.com</li><li><span>⌁</span> example.com</li><li><span>⌖</span> Dhaka, Bangladesh</li></ul>
-                <div class="showcase-social"><span>in</span><span>gh</span><em>Build better conversations.</em></div>
+                <ul>
+                  <li><span>✉</span> hello@example.com</li>
+                  <li><span>⌁</span> example.com</li>
+                  <li><span>⌖</span> Dhaka, Bangladesh</li>
+                </ul>
+                <div class="showcase-social">
+                  <span>in</span>
+                  <span>gh</span>
+                  <em data-i18n="home.hero.showcaseTagline">Build better conversations.</em>
+                </div>
               </div>
             </div>
           </div>
-          <span class="showcase-note note-one">Email-safe HTML <b>✓</b></span>
-          <span class="showcase-note note-two">Ready in minutes <b>✦</b></span>
+          <span class="showcase-note note-one"><span data-i18n="home.hero.noteSafe">Email-safe HTML</span> <b>✓</b></span>
+          <span class="showcase-note note-two"><span data-i18n="home.hero.noteFast">Ready in minutes</span> <b>✦</b></span>
         </div>
       </section>
 
-      <section id="how-it-works" class="how-it-works" aria-labelledby="how-title"><span class="eyebrow"><i aria-hidden="true"></i> Simple by design</span><h2 id="how-title">From blank to branded in three steps.</h2><div class="steps"><article><span>1</span><h3>Choose a layout</h3><p>Start with one of six email-safe professional templates.</p></article><article><span>2</span><h3>Make it yours</h3><p>Add your details, imagery, typography, and brand color.</p></article><article><span>3</span><h3>Copy and paste</h3><p>Move the finished signature into your email client.</p></article></div><a class="section-cta" href="./builder.html">Start building free <span>→</span></a></section>
-      <section id="compatibility" class="compatibility" aria-labelledby="compatibility-title"><div><span class="eyebrow"><i aria-hidden="true"></i> Built for the inbox</span><h2 id="compatibility-title">One signature.<br />Every conversation.</h2><p>Email-safe tables and inline styles help your signature stay polished across the clients your recipients use.</p><a class="compatibility-cta" href="./builder.html">Create your signature →</a></div><ul aria-label="Supported email clients"><li><strong>G</strong><span>Gmail<small>Web & mobile</small></span></li><li><strong>O</strong><span>Outlook<small>Desktop & web</small></span></li><li><strong>A</strong><span>Apple Mail<small>macOS & iOS</small></span></li><li><strong>+</strong><span>And more<small>Modern clients</small></span></li></ul></section>
+      <section id="how-it-works" class="how-it-works" aria-labelledby="how-title">
+        <span class="eyebrow"><i aria-hidden="true"></i> <span data-i18n="home.steps.eyebrow">Simple by design</span></span>
+        <h2 id="how-title" data-i18n="home.steps.title">From blank to branded in three steps.</h2>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3 data-i18n="home.steps.chooseTitle">Choose a layout</h3>
+            <p data-i18n="home.steps.chooseText">Start with one of six email-safe professional templates.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3 data-i18n="home.steps.customizeTitle">Make it yours</h3>
+            <p data-i18n="home.steps.customizeText">Add your details, imagery, typography, and brand color.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3 data-i18n="home.steps.copyTitle">Copy and paste</h3>
+            <p data-i18n="home.steps.copyText">Move the finished signature into your email client.</p>
+          </article>
+        </div>
+        <a class="section-cta" href="./builder.html">
+          <span data-i18n="home.steps.cta">Start building free</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <section id="compatibility" class="compatibility" aria-labelledby="compatibility-title">
+        <div>
+          <span class="eyebrow"><i aria-hidden="true"></i> <span data-i18n="home.compatibility.eyebrow">Built for the inbox</span></span>
+          <h2 id="compatibility-title" data-i18n-html="home.compatibility.title">One signature.<br />Every conversation.</h2>
+          <p data-i18n="home.compatibility.text">Email-safe tables and inline styles help your signature stay polished across the clients your recipients use.</p>
+          <a class="compatibility-cta" href="./builder.html">
+            <span data-i18n="home.compatibility.cta">Create your signature</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <ul aria-label="Supported email clients" data-i18n-attr="aria-label:home.compatibility.listLabel">
+          <li><strong>G</strong><span>Gmail<small data-i18n="home.compatibility.gmail">Web &amp; mobile</small></span></li>
+          <li><strong>O</strong><span>Outlook<small data-i18n="home.compatibility.outlook">Desktop &amp; web</small></span></li>
+          <li><strong>A</strong><span>Apple Mail<small data-i18n="home.compatibility.apple">macOS &amp; iOS</small></span></li>
+          <li>
+            <strong>+</strong>
+            <span><span data-i18n="home.compatibility.moreName">And more</span><small data-i18n="home.compatibility.more">Modern clients</small></span>
+          </li>
+        </ul>
+      </section>
     </main>
-    <footer><p>Built with care by <a href="https://github.com/sarif-mia">Sarif Mia</a>.</p><p>No account. No tracking. No data upload.</p></footer>
+
+    <footer class="site-footer">
+      <p><span data-i18n="common.footerCredit">Built with care by</span> <a href="https://github.com/sarif-mia">Sarif Mia</a></p>
+      <p data-i18n="common.footerPrivacy">No account. No tracking. No data upload.</p>
+    </footer>
   </body>
 </html>

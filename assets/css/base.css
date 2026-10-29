@@ -1,0 +1,120 @@
+/* Design tokens, reset and shared primitives used on every page. */
+
+:root {
+  color-scheme: light;
+  --ink: #101828;
+  --muted: #667085;
+  --line: #e4e7ec;
+  --soft: #f7f8fa;
+  --paper: #fff;
+  --navy: #111827;
+  --brand-dark: #192733;
+  --brand-orange: #ff7a59;
+  --brand-orange-hover: #ff957d;
+  --brand-teal: #5eead4;
+  --accent: #0f766e;
+  --accent-soft: #0f766e18;
+  --shadow: 0 30px 90px rgba(16, 24, 40, 0.12);
+  --font-body: "DM Sans", system-ui, Arial, sans-serif;
+  --font-display: Manrope, system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at 50% 0, rgba(15, 118, 110, 0.08), transparent 32rem), var(--soft);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: var(--accent);
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Shared labels */
+.eyebrow,
+.step-label {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow i {
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* Right-to-left and non-Latin script support */
+[dir="rtl"] .arrow {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+:is(:lang(ar), :lang(bn)) :is(h1, h2, h3, .brand) {
+  letter-spacing: normal;
+}
+
+:is(:lang(ar), :lang(bn)) :is(.eyebrow, .step-label, .hero-kicker) {
+  letter-spacing: 0.02em;
+}
+
+:lang(ar) h1 {
+  line-height: 1.25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
